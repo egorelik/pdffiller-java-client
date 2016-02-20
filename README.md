@@ -45,9 +45,9 @@ After the client libarary is installed/deployed, you can use it in your Maven pr
         .Recipient("jdoe@pdffiller.com", "John Doe", "Subject", "Message", SignatureRequestBody.Recipient.AccessEnum.FULL);
   List<SignatureRequestBody.Recipient> recipients = new ArrayList<SignatureRequestBody.Recipient>();   
   recipients.add(recipient);
-  SignatureRequestBody srb = new SignatureRequestBody(54337257, "sendtoeach", "message 123", false, recipients);
+  SignatureRequestBody srb = new SignatureRequestBody(54337257, "sendtoeach", "mortgage closing docs", false, recipients);
   // Get response 
-  String jsonResponse = request.createSignatureRequest(testSignatureRequestBody());
+  String jsonResponse = request.createSignatureRequest(srb);
 ```
 
 #### Fill document template
