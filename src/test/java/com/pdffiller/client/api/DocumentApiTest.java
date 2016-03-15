@@ -1,4 +1,4 @@
-package com.pdffiller.api;
+package com.pdffiller.client.api;
 
 import static org.junit.Assert.*;
 

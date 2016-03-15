@@ -1,4 +1,4 @@
-package com.pdffiller.api.utils;
+package com.pdffiller.client.utils;
 
 import junit.framework.Assert;
 

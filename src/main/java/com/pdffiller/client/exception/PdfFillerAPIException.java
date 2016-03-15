@@ -20,7 +20,7 @@ public class PdfFillerAPIException extends Exception {
   }
 
   public PdfFillerAPIException(String message, Throwable throwable, int code, Map<String, List<String>> responseHeaders, String responseBody) {
-    super(message, throwable);
+    super(message + " " + code + ": " + responseBody.toString(), throwable);
     this.code = code;
     this.responseHeaders = responseHeaders;
     this.responseBody = responseBody;
@@ -39,12 +39,12 @@ public class PdfFillerAPIException extends Exception {
   }
 
   public PdfFillerAPIException(int code, String message) {
-    super(message);
+    super("Error code: " + code + ", " + message);
     this.code = code;
   }
 
   public PdfFillerAPIException(int code, String message, Map<String, List<String>> responseHeaders, String responseBody) {
-    this(code, message);
+    this(code, message + ": " + responseBody.toString());
     this.responseHeaders = responseHeaders;
     this.responseBody = responseBody;
   }
